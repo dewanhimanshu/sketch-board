@@ -12,13 +12,17 @@ let server = app.listen(port, () => {
 
 let io = socket(server);
 
+
 io.on("connection", (socket) => {
     console.log("Made socket connection");
     // Received data
+   
+
     socket.on("beginPath", (data) => {
         // data -> data from frontend
         // Now transfer data to all connected computers
         socket.broadcast.emit("beginPath", data);
+         
     })
     socket.on("drawStroke", (data) => {
         socket.broadcast.emit("drawStroke", data);

@@ -81,8 +81,8 @@ redo.addEventListener("click", (e) => {
 })
 
 function undoRedoCanvas(trackObj) {
-    // track = trackObj.trackValue;
-    // undoRedoTracker = trackObj.undoRedoTracker;
+        track = trackObj.trackValue;
+        undoRedoTracker = trackObj.undoRedoTracker;
    
         let url = undoRedoTracker[trackObj.trackValue];
         let img = new Image(); // new image reference element
