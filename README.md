@@ -3,16 +3,19 @@
 ### Project Desciption:
 - This project comprises of basic openboard functionalities such as, writing, erasing, downloading the canvas, adding notes (with minimising it, closing it, dragging it around on the page), uploading the image (features same as of notes), undo and redo actions. <br>
 - Added realtime drawing functionality using Socket.io by connecting to server using Express.js
+![Screenshot from 2022-01-24 19-07-41](https://user-images.githubusercontent.com/32437794/150794921-a7e7a418-97c3-4501-af67-005abbbe6f49.png)
 
 
 
 #### Adding notes and uploading image:
 Using green button, we can minimise the notes and by clicking red button, notes can be closed. Similarly for uploading images. <br>
+![Screenshot from 2022-01-24 19-09-49](https://user-images.githubusercontent.com/32437794/150794936-83c0c706-3fbc-4511-ad0d-a13ee2dae2dd.png)
 
 
 
 #### Realtime drawing:
 Realtime drawing can be achieved by the people using same link at same time.
+![Screenshot from 2022-01-24 19-20-31](https://user-images.githubusercontent.com/32437794/150794958-d1ff2c9d-ca04-41d5-a1a6-a3fefe02f196.png)
 
 
 
