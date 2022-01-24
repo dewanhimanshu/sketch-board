@@ -85,7 +85,6 @@ function undoRedoCanvas(trackObj) {
         img.src = url;
         tool.clearRect(0, 0, canvas.width, canvas.height);
         img.onload = function() {
-        console.log(img)
         tool.drawImage(
           img,
           0,
