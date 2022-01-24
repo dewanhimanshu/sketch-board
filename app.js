@@ -18,15 +18,15 @@ io.on("connection", (socket) => {
     socket.on("beginPath", (data) => {
         // data -> data from frontend
         // Now transfer data to all connected computers
-        io.sockets.emit("beginPath", data);
+        socket.broadcast.emit("beginPath", data);
     })
     socket.on("drawStroke", (data) => {
-        io.sockets.emit("drawStroke", data);
+        socket.broadcast.emit("drawStroke", data);
     })
     socket.on("redoUndo", (data) => {
-        io.broadcast.emit("redoUndo", data);
+        socket.broadcast.emit("redoUndo", data);
     })
     socket.on("clearCanvas", (data) => {
-        io.sockets.emit("clearCanvas", data);
+        socket.broadcast.emit("clearCanvas", data);
     })
 })

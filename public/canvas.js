@@ -35,6 +35,7 @@ canvas.addEventListener("mousedown", (e) => {
         y: e.clientY
     }
     // send data to server
+    beginPath(data);
     socket.emit("beginPath", data);
 })
 canvas.addEventListener("mousemove", (e) => {
@@ -45,6 +46,7 @@ canvas.addEventListener("mousemove", (e) => {
             color: eraserFlag ? eraserColor : penColor,
             width: eraserFlag ? eraserWidth : penWidth
         }
+        drawStroke(data);
         socket.emit("drawStroke", data);
     }
 })
@@ -64,6 +66,7 @@ undo.addEventListener("click", (e) => {
         trackValue: track,
         undoRedoTracker
     }
+    undoRedoCanvas(data);
     socket.emit("redoUndo", data);
 })
 redo.addEventListener("click", (e) => {
@@ -100,6 +103,7 @@ function undoRedoCanvas(trackObj) {
 }
 
 del.addEventListener("click", (e) => {
+    clearCanvas();
     socket.emit("clearCanvas");
 })
 
