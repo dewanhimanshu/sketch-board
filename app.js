@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
         io.sockets.emit("drawStroke", data);
     })
     socket.on("redoUndo", (data) => {
-        io.sockets.emit("redoUndo", data);
+        io.broadcast.emit("redoUndo", data);
     })
     socket.on("clearCanvas", (data) => {
         io.sockets.emit("clearCanvas", data);

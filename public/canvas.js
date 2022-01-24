@@ -73,6 +73,7 @@ redo.addEventListener("click", (e) => {
         trackValue: track,
         undoRedoTracker
     }
+    undoRedoCanvas(data);
     socket.emit("redoUndo", data);
 })
 
